@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body onLoad="initMap()">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -110,8 +110,8 @@
                     <h2 class="section-heading">Enter Your Location</h2>
                     <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6" id="map">
+                    <!-- <img class="img-responsive" src="img/ipad.png" alt=""> -->
                 </div>
             </div>
 
@@ -228,6 +228,14 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Google Geocoding API and key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Z26oStJlYOC9H0aUIhqzbrU-gyAbNHc&signed_in=true&callback=initMap" async defer></script>
+
+    <!-- Google Maps API and key -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Z26oStJlYOC9H0aUIhqzbrU-gyAbNHc&signed_in=true&callback=initMap">
+    </script>
 
 </body>
 
