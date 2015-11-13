@@ -1,18 +1,18 @@
-	function showGroups(lon, lat) {
+/*	function showGroups(lon, lat) {
 	  var xhttp;
 	  xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	    if (xhttp.readyState == 4 && xhttp.status == 200) {
 	      document.getElementById("grouplist").innerHTML = xhttp.responseText;
 	      document.getElementById("loading").style.display="none";
-	    }
-	  }
+	    	}
+	  	}
 	  
 	  console.log("lon: "+lon+" lat: "+lat);
 	  
 	  xhttp.open("GET", "backend/loadgroups.php?lon="+lon+"&lat="+lat, true);
 	  xhttp.send(); 
-	}
+	} */
 	
 	function findDistance(yours, other) {
 		var latitude = 0;
@@ -113,7 +113,7 @@
 	  	document.getElementById('long').value = position.coords.longitude; 
 	  	document.getElementById('lat').value = position.coords.latitude; 
 	  	*/
-	  	showGroups(position.coords.longitude, position.coords.latitude);
+	  	// showGroups(position.coords.longitude, position.coords.latitude);
 	  	
 	  	console.log(whereAmI);
 	}
