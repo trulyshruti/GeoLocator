@@ -9,6 +9,8 @@
 				getLon(yourLoc, function(yourLon) {
 					getLon(otherLoc, function(otherLon) {
 							
+							// stuff goes here
+							
 						});
 					});
 				});
