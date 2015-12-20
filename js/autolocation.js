@@ -1,13 +1,34 @@
-$("#NextStep1").click(function(){
-  console.log("NextStep1 clicked");
-  $('#DropMarker').modal('show');
-});
-
 var labels = 'AB';
 var labelIndex = 0;
 var truelat;
 var truelong;
 var currentpos;
+var nextflag = 1;
+
+jQuery("#NextStep").click(function(){
+  if(truelat==null)
+  {
+    if(nextflag==1)
+      {
+        jQuery('#DropMarker').modal('show');
+        nextflag++;
+      }
+      else
+        jQuery('#ValidMarker').modal('show');
+  }
+  else if(truelat!=null)
+  {
+    drawline();
+  }
+  else
+    console.log("error");
+});
+
+function drawline()
+{
+  console.log("nextstep2");
+}
+
 
 function writeAddressName(latLng) {
   var geocoder = new google.maps.Geocoder();
@@ -97,6 +118,13 @@ function addMarker(location, map) {
     map: map,
     draggable: true
   });
+
+    
+
+    truelat = location.lat();
+    truelong = location.lng();
+
+    console.log(truelat + "    " + truelong);
 
     google.maps.event.addListener(markernew, 'dragend', function (event) {
     truelat = this.getPosition().lat();

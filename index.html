@@ -68,13 +68,32 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Point out your Location</h4>
+                    <h4 class="modal-title">Point Out Your Location</h4>
                 </div>
                 <div class="modal-body" style="max-height: 300px; overflow-y: auto">
                     <p>Click on the map to drop a marker pointing to your location. Feel free to drag it around!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="FindMarkerCoordinates();">Okay</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /loginmodal -->
+
+    <div id="ValidMarker" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Please Enter A Vaild Location</h4>
+                </div>
+                <div class="modal-body" style="max-height: 300px; overflow-y: auto">
+                    <p>Click on the map to drop a marker pointing to your location. Feel free to drag it around!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
                 </div>
             </div>
         </div>
@@ -113,7 +132,7 @@
     </div>
     <div class="row" style="padding-right: 6%; padding-top: 1%; float: right">
         <div class="btn-group" role="group" aria-label="...">
-            <button id="NextStep1" type="button" class="btn btn-info btn-lg">Next Step</button>
+            <button id="NextStep" type="button" class="btn btn-info btn-lg">Next Step</button>
         </div>
     </div>
 
@@ -181,8 +200,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Z26oStJlYOC9H0aUIhqzbrU-gyAbNHc&signed_in=true&callback=initMap">
     </script> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
     <script src="js/autolocation.js"></script>
 
