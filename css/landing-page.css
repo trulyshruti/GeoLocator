@@ -21,6 +21,10 @@ h6 {
     font-weight: 700;
 }
 
+#Finish { 
+    display: none;
+}
+
 #map {
 
     height: 100%;
