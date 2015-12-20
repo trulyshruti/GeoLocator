@@ -1,9 +1,12 @@
 var labels = 'AB';
 var labelIndex = 0;
+var givenloc;
 var truelat;
 var truelong;
+var trueloc;
 var currentpos;
 var nextflag = 1;
+var mapObject;
 
 jQuery("#NextStep").click(function(){
   if(truelat==null)
@@ -27,6 +30,18 @@ jQuery("#NextStep").click(function(){
 function drawline()
 {
   console.log("nextstep2");
+  var flightPlanCoordinates = [
+    trueloc, givenloc
+  ];
+  var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath.setMap(mapObject);
 }
 
 
@@ -49,18 +64,19 @@ var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coord
 writeAddressName(userLatLng);
 
 var myOptions = {
-  zoom : 16,
+  zoom : 17,
   center : userLatLng,
   mapTypeId : google.maps.MapTypeId.ROADMAP
 };
 // Draw the map
-var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
 // Place the marker
 // new google.maps.Marker({
 //   map: mapObject,
 //   position: userLatLng
 // });
 
+givenloc = userLatLng;
 addMarker(userLatLng,mapObject);
 
 // Draw a circle around the user position to have an idea of the current localization accuracy
@@ -120,7 +136,7 @@ function addMarker(location, map) {
   });
 
     
-
+    trueloc = location;
     truelat = location.lat();
     truelong = location.lng();
 
@@ -129,6 +145,7 @@ function addMarker(location, map) {
     google.maps.event.addListener(markernew, 'dragend', function (event) {
     truelat = this.getPosition().lat();
     truelong = this.getPosition().lng();
+    trueloc = this.getPosition();
     console.log(truelat + "    " + truelong);
 });
 
