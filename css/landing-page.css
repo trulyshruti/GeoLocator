@@ -27,6 +27,12 @@ h6 {
     width: 100%;
 }
 
+.divcenter {
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .topnav {
     font-size: 14px; 
 }
