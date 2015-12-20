@@ -30,6 +30,14 @@ h6 {
     font-size: 14px; 
 }
 
+.transbox2 {
+    margin: 10%;
+    background-color: #ffffff;
+    border: 2px solid black;
+    opacity: 0.75;
+    color: black;
+}
+
 .lead {
     font-size: 18px;
     font-weight: 400;
@@ -40,7 +48,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background: url(../img/geolocator-bg2.jpg) no-repeat center center;
     background-size: cover;
 }
 
