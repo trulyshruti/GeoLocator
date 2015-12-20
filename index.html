@@ -30,7 +30,7 @@
 
 </head>
 
-<body onLoad="initMap()">
+<body style="height: 100%; width: 100%" onload="initMap()">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -87,23 +87,9 @@
     <!-- Page Content -->
 
     <a name="CheckMyLocation"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div id="map">
-                
-                	<div class="embed-responsive embed-responsive-16by9" id="frame-main" style="display: block; overflow:hidden;">
-                		<iframe class="embed-responsive-item" id="main-frame" name="main-frame" src="google-code/geolocation.html" style="overflow:hidden;height:100%;width:100%;" height="100%" width="100%"></iframe>
-            		</div>
-            		
-                </div>
-            </div>
-
+    <div class="content-section-a" style="height:100%; width:100%;">
+        <div id="map">          		
         </div>
-        <!-- /.container -->
-
     </div>
     <!-- /.content-section-a -->
 
@@ -168,6 +154,8 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Z26oStJlYOC9H0aUIhqzbrU-gyAbNHc&signed_in=true&callback=initMap">
     </script>
+
+    <script src="js/madhuri.js"></script>
 
 </body>
 
