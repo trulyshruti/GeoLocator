@@ -1,3 +1,8 @@
+$("#NextStep1").click(function(){
+  console.log("NextStep1 clicked");
+  $('#DropMarker').modal('show');
+});
+
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},

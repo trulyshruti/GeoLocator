@@ -61,6 +61,25 @@
         <!-- /.container -->
     </nav>
 
+    <div id="DropMarker" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Point out your Location</h4>
+                </div>
+                <div class="modal-body" style="max-height: 300px; overflow-y: auto">
+                    <p>Click on the map to drop a marker pointing to your location. Feel free to drag it around!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="FindMarkerCoordinates();">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /loginmodal -->
+
 
     <!-- Header -->
     <div class="intro-header">
@@ -94,7 +113,7 @@
     </div>
     <div class="row" style="padding-right: 6%; padding-top: 1%; float: right">
         <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-info btn-lg">Next Step</button>
+            <button id="NextStep1" type="button" class="btn btn-info btn-lg">Next Step</button>
         </div>
     </div>
 
