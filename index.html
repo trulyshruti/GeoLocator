@@ -132,11 +132,15 @@
 
     <div class="content-section-a">
 
-        <div class="container" style="height:100%">
+        <div class="container">
 
-            <div class="row" style="height:100%">
-                <div id="map" style="height:100%">
-                    <iframe src="google-code/geolocation.html" style="height:100%"></iframe>
+            <div class="row">
+                <div id="map">
+                
+                	<div class="embed-responsive embed-responsive-16by9" id="frame-main" style="display: block; overflow:hidden;">
+                		<iframe class="embed-responsive-item" id="main-frame" name="main-frame" src="google-code/geolocation.html" style="overflow:hidden;height:100%;width:100%;" height="100%" width="100%"></iframe>
+            		</div>
+            		
                 </div>
             </div>
 
