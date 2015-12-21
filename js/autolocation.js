@@ -42,8 +42,12 @@ function refreshPage() {
 function calcresults() {
 distance = getDistance(trueloc, givenloc);
 distance = Number((distance).toFixed(4));
-var resultsnode = document.getElementById("Resultstext");
-Resultstext.innerHTML = distance + " meters";
+var resultsnode1 = document.getElementById("Resultstext1");
+Resultstext1.innerHTML = trueloc;
+var resultsnode2 = document.getElementById("Resultstext2");
+Resultstext2.innerHTML = givenloc;
+var resultsnode3 = document.getElementById("Resultstext3");
+Resultstext3.innerHTML = distance + " meters";
 }
 
 
